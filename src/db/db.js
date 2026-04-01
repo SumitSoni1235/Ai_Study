@@ -1,10 +1,11 @@
 const conn = require('mysql2');
 
 const conection = conn.createConnection({
-    host: 'localhost',
+    host: 'dpg-d76fa2p4tr6s738qgp00-a',
     user:'root',
-    password:'Soniji@1235',
-    database:'AiStudy'
+    password:'MYWqsCqN2qbxIfUhaIp5L2DSXUKwkoGL',
+    database:'aistudydb',
+
 })
 console.log('Database connected successfully');
 
