@@ -8,7 +8,7 @@ async function invokeai(){
     });
     const response = await ai.models.generateContent({
         model:"gemini-2.5-flash",
-        contents:"What is the capital of India?"
+        contents:"What is the interview process for a software engineering role at Google?"
     })
     console.log(response.text);
 }
