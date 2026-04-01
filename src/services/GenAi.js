@@ -10,7 +10,7 @@ async function invokeai(){
         model:"gemini-2.5-flash",
         contents:"What is the interview process for a software engineering role at Google?"
     })
-    console.log(response.text);
+    return response.text; // ✅ IMPORTANT
 }
 
 module.exports = {invokeai};
