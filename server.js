@@ -3,7 +3,7 @@ const { bootstrap } = require('global-agent');
 bootstrap();
 
 const app= require('./app');
-require('./src/db/db');
+
 const {invokeai} = require('./src/services/GenAi');
 invokeai();
 
