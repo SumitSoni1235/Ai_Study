@@ -12,25 +12,20 @@
 // module.exports = conection;
 
 
-const mysql = require('mysql2');
+const db = require('pg');
 
-let connection;
+const pool = new db.Pool({
+    host: 'dpg-d76fa2p4tr6s738qgp00-a',
+    user:'root',
+    password:'MYWqsCqN2qbxIfUhaIp5L2DSXUKwkoGL',
+    database:'aistudydb',
+    port: 5432,
+})
 
-function connectDB() {
-    connection = mysql.createConnection({
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_NAME,
-    });
-
-    connection.connect((err) => {
-        if (err) {
-            console.log("DB Error:", err);
-        } else {
-            console.log("Database connected successfully");
-        }
-    });
-}
+pool.connect().then(()=>{
+    console.log('Database connected successfully');
+}).catch((err)=>{
+    console.error('Error connecting to the database:', err);
+})
 
 module.exports = { connectDB };

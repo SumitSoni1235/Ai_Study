@@ -5,7 +5,6 @@ bootstrap();
 
 const app= require('./app');
 
-
 const {invokeai} = require('./src/services/GenAi');
 invokeai();
 app.use('/',routes);
