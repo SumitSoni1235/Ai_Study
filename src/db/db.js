@@ -28,4 +28,5 @@ pool.connect().then(()=>{
     console.error('Error connecting to the database:', err);
 })
 
+
 module.exports = { connectDB };

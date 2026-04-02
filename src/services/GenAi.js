@@ -3,7 +3,7 @@ async function invokeai(){
   
 
     const ai = new GoogleGenAI({
-        apiKey: "AIzaSyC0lM_Hk9GHtuecXOs7kL9DKm6whRjkRoU",
+        apiKey: "AIzaSyDOsLusGL9Q7hAhzM7yWJ3mtUneF0TByBQ",
        
     });
     const response = await ai.models.generateContent({
